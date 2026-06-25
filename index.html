@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Event Registration Form</h1>
+        <form id="registrationForm" action="register.php" method="POST" onsubmit="return validateForm()">
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+
+            <label for="studentNumber">Student Number</label>
+            <input type="text" id="studentNumber" name="studentNumber" placeholder="e.g. 20231234">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" name="eventName" placeholder="e.g. Web Development Workshop">
+
+            <label for="attendanceType">Attendance Type</label>
+            <select id="attendanceType" name="attendanceType">
+                <option value="">-- Please select --</option>
+                <option value="Online">Online</option>
+                <option value="Face-to-Face">Face-to-Face</option>
+            </select>
+
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="0" max="5" placeholder="0 - 5">
+
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Any additional notes..."></textarea>
+
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+    </div>
+
+    <script src="validate.js"></script>
+</body>
+</html>
